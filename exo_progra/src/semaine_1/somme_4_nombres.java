@@ -1,3 +1,5 @@
+package semaine_1;
+
 import java.util.Scanner;
 
 public class somme_4_nombres {

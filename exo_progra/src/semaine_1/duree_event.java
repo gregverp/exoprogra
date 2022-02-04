@@ -1,3 +1,5 @@
+package semaine_1;
+
 import java.util.Scanner;
 
 public class duree_event {
