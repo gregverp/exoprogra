@@ -9,15 +9,11 @@ public class maximum {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        if(a > b && a > c){
-            System.out.println(a+" est le plus grand.");
-            return;
-        }
-        if(b > a && b > c){
-            System.out.println(b+" est le plus grand.");
-            return;
-        }
-        System.out.println(c+" est le plus grand.");
+        if (a > b && a > c)
+            System.out.println(a + " est le plus grand.");
+        if (b > a && b > c)
+            System.out.println(b + " est le plus grand.");
+        else
+            System.out.println(c + " est le plus grand.");
     }
-
 }
