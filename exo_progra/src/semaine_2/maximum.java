@@ -9,11 +9,9 @@ public class maximum {
         double a = scan.nextDouble();
         double b = scan.nextDouble();
         double c = scan.nextDouble();
-        if (a > b && a > c)
-            System.out.println(a + " est le plus grand.");
-        if (b > a && b > c)
-            System.out.println(b + " est le plus grand.");
-        else
-            System.out.println(c + " est le plus grand.");
+        double max = a;
+        if(b > max) max = b;
+        if(c > max) max = c;
+        System.out.println("Le nombre maximum est "+ max + ".");
     }
 }
