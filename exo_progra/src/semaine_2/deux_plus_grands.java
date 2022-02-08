@@ -9,12 +9,21 @@ public class deux_plus_grands {
         double a = scan.nextDouble();
         double b = scan.nextDouble();
         double c = scan.nextDouble();
-       if(a > b) {
-           if (b > c)
-               System.out.println(a + " et " + b);
-           else
-               System.out.println(a + " et " + c);
-       } else
-            System.out.println(b + " et " + c);
+        if (a > b) {
+            double tmp = a;
+            a = b;
+            b = tmp;
+        }
+        if (b > c) {
+            double tmp = b;
+            b = c;
+            c = tmp;
+        }
+        if (a > b) {
+            double tmp = a;
+            a = b;
+            b = tmp;
+        }
+        System.out.println(a + " " + b);
     }
 }

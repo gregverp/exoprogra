@@ -9,20 +9,20 @@ public class odre_croissant {
         double a = scan.nextDouble();
         double b = scan.nextDouble();
         double c = scan.nextDouble();
-        if (a > b){
+        if (a > b) {
             double tmp = a;
-            a =b;
-            b =tmp;
+            a = b;
+            b = tmp;
         }
-        if(b > c){
+        if (b > c) {
             double tmp = b;
             b = c;
             c = tmp;
         }
-        if(a>b){
+        if (a > b) {
             double tmp = a;
-            a =b;
-            b=tmp;
+            a = b;
+            b = tmp;
         }
         System.out.println(a + " " + b + " " + c);
     }
