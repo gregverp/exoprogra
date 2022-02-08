@@ -8,7 +8,7 @@ public class moment_ulterieur {
         System.out.println("Veuillez entrez les heures puis les minutes.");
         int heure = scanner.nextInt();
         int minutes = scanner.nextInt();
-        if(minutes == 59) {
+        if (minutes == 59) {
             heure += 1;
             minutes = 0;
         } else {

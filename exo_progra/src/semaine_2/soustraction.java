@@ -9,7 +9,7 @@ public class soustraction {
         double a = scan.nextDouble();
         double b = scan.nextDouble();
         double result;
-        if(a < b)
+        if (a < b)
             result = b - a;
         else
             result = a - b;

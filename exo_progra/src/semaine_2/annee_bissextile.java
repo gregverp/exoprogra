@@ -7,9 +7,7 @@ public class annee_bissextile {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entrez une année.");
         int annee = scanner.nextInt();
-        if(annee%400 == 0)
-            System.out.println("L'année est bissextile.");
-        else if(annee%4 == 0 && annee%100!=0)
+        if (annee % 400 == 0 || annee % 4 == 0 && annee % 100 != 0)
             System.out.println("L'année est bissextile.");
         else
             System.out.println("L'année n'est pas bissextile.");

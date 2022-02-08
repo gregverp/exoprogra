@@ -8,6 +8,6 @@ public class valeur_absolue {
         System.out.println("entrez un nombre.");
         double a = scan.nextDouble();
         if (a < 0) a = -a;
-        System.out.println("sa valeur absolue vaut "+ a + ".");
+        System.out.println("sa valeur absolue vaut " + a + ".");
     }
 }

@@ -11,13 +11,13 @@ public class prix_location {
         double jours = scanner.nextDouble();
         double km = scanner.nextDouble();
         double prixFinal = forfaitJournalier;
-        if(jours < 1) System.out.println("Entrez un nombre valide de jours.");
-        if(km < 50){
-            prixFinal = forfaitJournalier*jours;
-        } else if(km < 450){
-            prixFinal = (forfaitJournalier*jours)+(km*prixKm);
+        if (jours < 1) System.out.println("Entrez un nombre valide de jours.");
+        if (km < 50) {
+            prixFinal = forfaitJournalier * jours;
+        } else if (km < 450) {
+            prixFinal = (forfaitJournalier * jours) + (km * prixKm);
         } else {
-            prixFinal = (forfaitJournalier*jours)+(km*prixKm)+(((km-450)*prixKm)*1.1);
+            prixFinal = (forfaitJournalier * jours) + (km * prixKm) + (((km - 450) * prixKm) * 1.1);
         }
         System.out.println("Votre location coûtera: " + prixFinal + "€.");
     }
