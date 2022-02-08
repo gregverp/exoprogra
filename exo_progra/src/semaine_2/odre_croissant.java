@@ -24,6 +24,6 @@ public class odre_croissant {
             a =b;
             b=tmp;
         }
-        System.out.println(a + " " + b + " " + "c");
+        System.out.println(a + " " + b + " " + c);
     }
 }
