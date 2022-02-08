@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class soustraction {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Entrez deux entiers.");
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int result;
+        System.out.println("Entrez deux nombres.");
+        double a = scan.nextDouble();
+        double b = scan.nextDouble();
+        double result;
         if(a < b)
             result = b - a;
         else

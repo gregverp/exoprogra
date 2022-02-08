@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class ordre_relatif {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Entrez deux entiers.");
-        int a = scan.nextInt();
-        int b = scan.nextInt();
+        System.out.println("Entrez deux nombres.");
+        double a = scan.nextDouble();
+        double b = scan.nextDouble();
         if(a > b)
             System.out.println("Le premier est plus grand que le deuxième.");
         else if(a == b)
