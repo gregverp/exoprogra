@@ -6,15 +6,19 @@ public class comparaison {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int i = 0;
-        int cpt = 0;
         int premierNombre = 0;
         int dernierNombre = 0;
         while (i != -1) {
-            System.out.println("Entrez un entier.");
-            i = scanner.nextInt();
-            if (cpt == 0) premierNombre = i;
-            if (i != -1) dernierNombre = i;
-            cpt++;
+            System.out.println("Entrez un entier différent de 0 (-1 pour arrêter).");
+            if(i == 0){
+                i = scanner.nextInt();
+                premierNombre = i;
+            } else if(i == -1) {
+                premierNombre = i;
+            } else {
+                i = scanner.nextInt();
+                dernierNombre = i;
+            }
         }
         if (premierNombre == -1) {
             System.out.println("La suite est vide.");
