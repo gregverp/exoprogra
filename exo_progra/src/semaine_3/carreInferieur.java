@@ -2,7 +2,7 @@ package semaine_3;
 
 import java.util.Scanner;
 
-public class carre_inferieur {
+public class carreInferieur {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entrez un entier.");

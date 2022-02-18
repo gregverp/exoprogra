@@ -2,7 +2,7 @@ package semaine_3;
 
 import java.util.Scanner;
 
-public class valeur_de_n {
+public class valeurN {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entrez le nombre maximum.");

@@ -2,7 +2,7 @@ package semaine_3;
 
 import java.util.Scanner;
 
-public class moyenne_n_nombres {
+public class moyenneNNombres {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Entrez d'abord la quantité de nombres.");
