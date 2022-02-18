@@ -13,8 +13,8 @@ public class detecteur {
         for (int i = 0; i < a; i++) {
             int b = scanner.nextInt();
             if (b < 0) compteurNegatif++;
-            if (b > 0) compteurPositif++;
-            if(b == 0) compteurNul++;
+            else if (b > 0) compteurPositif++;
+            else compteurNul++;
             System.out.println("positifs : "+compteurPositif);
             System.out.println("negatifs : "+compteurNegatif);
             System.out.println("nul : "+compteurNul);

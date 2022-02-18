@@ -2,7 +2,7 @@ package semaine_1;
 
 import java.util.Scanner;
 
-public class inversion_4_valeurs {
+public class permutationCyclique {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Entrez 4 entiers.");
@@ -11,11 +11,10 @@ public class inversion_4_valeurs {
         int c = scan.nextInt();
         int d = scan.nextInt();
         int tmp = d;
-        d = a;
-        a = tmp;
-        tmp = c;
+        d = c;
         c = b;
-        b = tmp;
+        b = a;
+        a = tmp;
         System.out.println(a+" "+b+" "+c+" "+d);
     }
 }

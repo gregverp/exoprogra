@@ -2,7 +2,7 @@ package semaine_1;
 
 import java.util.Scanner;
 
-public class somme_4_nombres {
+public class somme4Nombres {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Entrez 4 entiers.");

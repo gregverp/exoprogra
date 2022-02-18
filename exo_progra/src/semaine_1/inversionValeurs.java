@@ -2,7 +2,7 @@ package semaine_1;
 
 import java.util.Scanner;
 
-public class inversion_valeurs {
+public class inversionValeurs {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Entrez 3 entiers.");

@@ -2,7 +2,7 @@ package semaine_1;
 
 import java.util.Scanner;
 
-public class duree_event {
+public class dureeEvent {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Quelle heure etait-il au lancement de l'evenement? Entre d'abord l'heure puis les minutes.");

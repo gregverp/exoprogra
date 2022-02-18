@@ -6,13 +6,19 @@ public class puissance2Entiers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entrez les deux nombres que vous voulez factoriser.");
-        int a = scanner.nextInt();
+        double a = scanner.nextInt();
         int b = scanner.nextInt();
+        int bNegatif = 1;
         if (a == 0 && b == 0) throw new ArithmeticException("On ne peut factoriser 0 par lui-même.");
-        for (int i = 0; i < b - 1; i++) {
-            a *= a;
+        if(b < 0) {
+            bNegatif = b;
+            b = -b;
         }
-        if (b < 0) a = 1 / a;
-        System.out.println("le résultat de la factorielle vaut :" + a + ".");
+        double base = a;
+        for (int i = 1; i < b; i++) {
+            a *= base;
+        }
+        if (bNegatif < 0) a = 1 / a;
+        System.out.println("le résultat de la factorielle vaut : " + a + ".");
     }
 }
