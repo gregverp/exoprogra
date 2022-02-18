@@ -6,10 +6,7 @@ public class valeurN {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entrez le nombre maximum.");
-        int max = scanner.nextInt();
-        int i = 1;
-        int dernierNombre = 0;
-        int somme = 0;
+        int max = scanner.nextInt(), i = 1, dernierNombre = 0, somme = 0;
         while (somme < max) {
             somme += i;
             if (somme < max) {

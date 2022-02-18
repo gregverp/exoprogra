@@ -7,8 +7,7 @@ public class puissance2Entiers {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entrez les deux nombres que vous voulez factoriser.");
         double a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int bNegatif = 1;
+        int b = scanner.nextInt(), bNegatif = 1;
         if (a == 0 && b == 0) throw new ArithmeticException("On ne peut factoriser 0 par lui-même.");
         if(b < 0) {
             bNegatif = b;

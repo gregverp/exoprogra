@@ -6,8 +6,7 @@ public class suiteCroissante {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Entrer minimum 2 nombres positifs (terminer par -1):");
-        int a = scan.nextInt();
-        int b = scan.nextInt();
+        int a = scan.nextInt(), b = scan.nextInt();
         while (a < b) {
             a = b;
             b = scan.nextInt();

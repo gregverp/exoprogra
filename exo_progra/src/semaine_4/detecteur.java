@@ -6,10 +6,7 @@ public class detecteur {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Veuillez entrer le nombre de chiffres que vous voulez analyser.");
-        int a = scanner.nextInt();
-        int compteurNegatif = 0;
-        int compteurPositif = 0;
-        int compteurNul = 0;
+        int a = scanner.nextInt(),compteurNegatif = 0,compteurPositif = 0,compteurNul = 0;
         for (int i = 0; i < a; i++) {
             int b = scanner.nextInt();
             if (b < 0) compteurNegatif++;
