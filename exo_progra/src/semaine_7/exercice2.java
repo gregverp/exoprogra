@@ -65,23 +65,37 @@ public class exercice2 {
         return resultat;
     }
 
-    public static boolean estDivisible(double a, double b) {
-        return (a % b) == 0;
+    public static boolean estMultiple(double a, double b) {
+        return a % b == 0;
     }
 
-    public static boolean estEntier(double a) {
-        if (a < 2) return false;
-        for (int i = 2; i < a; i++) {
-            if (a % i == 0) return false;
+    public static boolean estPremier(double a) {
+        boolean estPremier = true;
+        int diviseur = 2;
+        if (a < 2) throw new IndexOutOfBoundsException("A ne peut pas valoir moins de 2.");
+        while(diviseur < a && estPremier) {
+            estPremier = !estMultiple(a, diviseur);
+            ++diviseur;
         }
-        return true;
+        return estPremier;
     }
+
+    /**
+     * public static boolean estEntier(double a) {
+     *         if (a < 2) return false;
+     *         for (int i = 2; i < a; i++) {
+     *             if (a % i == 0) return false;
+     *         }
+     *         return true;
+     *     }
+     */
 
     public static int qtePremiersInferieurs(double a) {
         int counter = 0;
-        if (a == 1) return 0;
-        for (int i = 1; i <= a; i++) {
-            if (estEntier(i)) counter++;
+        if (a > 1) {
+            for (int i = 2; i < a; i++) {
+                if (estPremier(i)) counter++;
+            }
         }
         return counter;
     }
@@ -96,6 +110,6 @@ public class exercice2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(multiplication(2, -5));
+        xDessin(4);
     }
 }

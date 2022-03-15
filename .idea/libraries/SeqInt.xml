@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SeqInt">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/exo_progra/SeqInt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
