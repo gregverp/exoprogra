@@ -37,13 +37,19 @@ public class exercices {
     }
 
     public static double moyenne(SeqInt s) {
-        if(estVide(s)) return 0;
-        return (double)somme(s) / (double)taille(s);
+        if(estVide(s)) throw new IllegalArgumentException("Pas de moyenne sur une séquence vide.");
+        SeqIntIterator it = s.iterator();
+        int somme = 0, counter = 0;
+        while(it.hasNext()){
+            somme += it.next();
+            counter++;
+        }
+        return somme/(double)counter;
     }
 
     public static int maximum(SeqInt s) {
         SeqIntIterator it = s.iterator();
-        int maximum = 0;
+        int maximum = Integer.MIN_VALUE;
         while (it.hasNext()) {
             int valeurActuelle = it.next();
             if (valeurActuelle > maximum) maximum = valeurActuelle;
@@ -75,7 +81,7 @@ public class exercices {
     public static boolean estCroissante(SeqInt s) {
         SeqIntIterator it = s.iterator();
         boolean returnable = true;
-        int current = 0, previous  = 0;
+        int current, previous  = 0;
         while (it.hasNext()) {
            current = it.next();
            if(previous > current) returnable = false;
@@ -87,7 +93,7 @@ public class exercices {
     public static boolean possedeDoublon(SeqInt s){
         SeqIntIterator it = s.iterator();
         boolean returnable = false;
-        int current = 0, previous = 0;
+        int current, previous = 0;
         while(it.hasNext()){
             current = it.next();
             if (previous == current) returnable = true;
@@ -120,8 +126,64 @@ public class exercices {
         return position;
     }
 
+    public static int quantiteDeMax(SeqInt s){
+        SeqIntIterator it = s.iterator();
+        int max = maximum(s), counter = 0;
+        while(it.hasNext()){
+            if(it.next() == max) counter++;
+        }
+
+        return counter;
+    }
+
+    public static int plusGrandNegatif(SeqInt s){
+        SeqIntIterator it = s.iterator();
+        int smallest = Integer.MAX_VALUE, current;
+        while(it.hasNext()){
+            current = it.next();
+            if(current < 0 && current < smallest) smallest = current;
+        }
+
+        return smallest;
+    }
+
+    public static SeqInt boundaries(SeqInt s){
+        SeqIntIterator it = s.iterator();
+        int smallest = Integer.MAX_VALUE, highest = Integer.MIN_VALUE;
+        while(it.hasNext()){
+            int current = it.next();
+            if(current < smallest) smallest = current;
+            if(current > highest) highest = current;
+        }
+        return new SeqInt(smallest, highest);
+    }
+
+    public static SeqInt twoHighest(SeqInt s){
+        SeqIntIterator it = s.iterator();
+        int second = Integer.MIN_VALUE, first = Integer.MIN_VALUE;
+        if(taille(s) < 2) return null;
+        while(it.hasNext()){
+            int current = it.next();
+            if(current > first) first = current;
+            if(current != first && current > second) second = current;
+        }
+        return new SeqInt(first, second);
+    }
+
     public static void main(String[] args) {
         SeqInt s = new SeqInt(7, 45, -7);
+        System.out.println(somme(s));
+        System.out.println(quantiteNombre(s, 14));
+        System.out.println(position(s, 7));
+        System.out.println(premierePosition(s, 7));
+        System.out.println(estCroissante(s));
+        System.out.println(possedeDoublon(s));
+        System.out.println(positionMax(s));
+        System.out.println(premierePositionMax(s));
+        System.out.println(quantiteDeMax(s));
+        System.out.println(plusGrandNegatif(s));
+        System.out.println(boundaries(s));
+        System.out.println(twoHighest(s));
         System.out.println(moyenne(s));
     }
 }
