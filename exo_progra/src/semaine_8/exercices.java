@@ -49,15 +49,17 @@ public class exercices {
 
     public static int maximum(SeqInt s) {
         SeqIntIterator it = s.iterator();
+        if(estVide(s)) throw new IllegalArgumentException("Pas de max dans une séquence vide.");
         int maximum = Integer.MIN_VALUE;
         while (it.hasNext()) {
-            int valeurActuelle = it.next();
-            if (valeurActuelle > maximum) maximum = valeurActuelle;
+            int current = it.next();
+            if (current > maximum) maximum = current;
         }
         return maximum;
     }
 
     public static int position(SeqInt s, int n) {
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int position = -1, counter = 0;
         while (it.hasNext()) {
@@ -69,6 +71,7 @@ public class exercices {
     }
 
     public static int premierePosition(SeqInt s, int n) {
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int position = -1, counter = 0;
         while (it.hasNext()) {
@@ -79,6 +82,7 @@ public class exercices {
     }
 
     public static boolean estCroissante(SeqInt s) {
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         boolean returnable = true;
         int current, previous  = 0;
@@ -91,6 +95,7 @@ public class exercices {
     }
 
     public static boolean possedeDoublon(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         boolean returnable = false;
         int current, previous = 0;
@@ -103,6 +108,7 @@ public class exercices {
     }
 
     public static int positionMax(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int max = maximum(s), counter = 0, position = -1;
         while(it.hasNext()){
@@ -115,6 +121,7 @@ public class exercices {
     }
 
     public static int premierePositionMax(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int max = maximum(s), counter = 0, position = -1;
         while(it.hasNext()){
@@ -127,6 +134,7 @@ public class exercices {
     }
 
     public static int quantiteDeMax(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int max = maximum(s), counter = 0;
         while(it.hasNext()){
@@ -137,6 +145,7 @@ public class exercices {
     }
 
     public static int plusGrandNegatif(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int smallest = Integer.MAX_VALUE, current;
         while(it.hasNext()){
@@ -148,6 +157,7 @@ public class exercices {
     }
 
     public static SeqInt boundaries(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int smallest = Integer.MAX_VALUE, highest = Integer.MIN_VALUE;
         while(it.hasNext()){
@@ -159,6 +169,7 @@ public class exercices {
     }
 
     public static SeqInt twoHighest(SeqInt s){
+        if(estVide(s)) throw new IllegalArgumentException("Séquence vide.");
         SeqIntIterator it = s.iterator();
         int second = Integer.MIN_VALUE, first = Integer.MIN_VALUE;
         if(taille(s) < 2) return null;
