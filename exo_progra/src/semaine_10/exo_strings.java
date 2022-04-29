@@ -87,16 +87,16 @@ public class exo_strings {
         return inversion(str);
     }
 
-    public static int[] occurencesLettres(String s) {
-        int[] occurences =[i];
-        String[] occurencesEcrites = new String[];
+    public static int occurencesLettres(String s) {
+        int[] occurences;
+        String[] occurencesEcrites = new String[4];
         for (int i = 0; i < s.length(); i++) {
-            occurences[s.charAt(i) - (int)'a']++;
+            //occurences[s.charAt(i) - (int)'a']++;
         }
-        for (int i = 0; i < occurences.length; i++) {
-            if(occurencesEcrites.length
-        }
-        return occurences;
+        //for (int i = 0; i < occurences.length; i++) {
+        //}
+        //return occurences;
+        return 0;
     }
 
     public static void main(String[] args) {
