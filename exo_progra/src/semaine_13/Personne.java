@@ -46,12 +46,22 @@ public class Personne {
         LocalDate now = LocalDate.now();
         int jour = now.getDayOfMonth();
         int mois = now.getMonthValue();
-        int annee = now.getDayOfYear();
+        int annee = now.getYear();
         Date today = new Date(jour, mois, annee);
-
+        if(today.mois > this.ddn.mois) {
+            return today.annee - this.ddn.annee;
+        } else if (today.mois < this.ddn.mois){
+            return  today.annee - this.ddn.annee-1;
+        } else if(today.jour > this.ddn.jour) {
+            return today.annee - this.ddn.annee;
+        } else if(today.jour < this.ddn.jour){
+            return  today.annee - this.ddn.annee-1;
+        } else {
+            return today.annee - this.ddn.annee;
+        }
     }
 
     public String toString() {
-        return this.nom + " " + this.prenom + ", né le " + this.ddn;
+        return this.nom + " " + this.prenom + ", né.e le " + this.ddn;
     }
 }

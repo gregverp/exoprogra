@@ -1,7 +1,6 @@
 package semaine_13;
 
 import eu.epfc.prm2.Array;
-
 import java.util.Scanner;
 
 public class Main {
@@ -76,7 +75,7 @@ public class Main {
     }
 
     public static void exercice5(){
-        Personne p1 =  new Personne("Fontaine", "Claude", 11, 7 ,1998);
+        Personne p1 =  new Personne("Fontaine", "Claude", 11, 07 ,1998);
         System.out.println(p1.getAge());
     }
     public static void main(String[] args) {
